@@ -1,13 +1,108 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #7f5a83;
+  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+}
+
+.container {
+  flex-direction: column;
+  display: flex;
+  height: 80vh;
+  width: 70vw;
+  border: 2px solid black;
+  border-radius: 10px;
+  overflow-y: scroll;
+  background: #e0eafc;
+  background: linear-gradient(to right, #cfdef3, #e0eafc);
+}
+
+.messageContainer {
+  min-height: 5vh;
+  width: 65vw;
+  overflow-y: scroll;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.sendButton {
+  width: 5vw;
+  height: fit-content;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.rightBlockMessage {
+  align-self: flex-end;
+  min-height: fit-content;
+  max-width: 80%;
+  border: 2px solid black;
+  border-radius: 5px;
+  clear: both;
+  margin: 15px 20px;
+  padding: 10px;
+}
+
+.leftBlockMessage {
+  align-self: flex-start;
+  min-height: fit-content;
+  max-width: 80%;
+  border: 2px solid black;
+  border-radius: 5px;
+  clear: both;
+  margin: 15px 20px;
+  padding: 10px;
+}
+
+.centerBlockMessage {
+  align-self: center;
+  min-height: fit-content;
+  max-width: 80%;
+  border: 2px solid red;
+  border-radius: 5px;
+  clear: both;
+  padding: 10px;
+}
+
+.landingPageMainContainer {
+  height: 92vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #7f5a83;
+  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+}
+
+.header {
+  border-bottom: 2px solid blueviolet;
+}
+
+.rooms-container-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  height: 90%;
 }
