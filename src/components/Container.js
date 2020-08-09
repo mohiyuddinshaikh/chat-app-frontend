@@ -139,6 +139,7 @@ export default function Container(props) {
               color: "white",
               marginLeft: "2px",
             }}
+            onClick={sendMessage}
           >
             Send
           </Button>
