@@ -3,11 +3,11 @@ import socketIOClient from "socket.io-client";
 import { isMobile } from "react-device-detect";
 import Button from "@material-ui/core/Button";
 
-const ENDPOINT = "http://192.168.0.105:8000";
+const ENDPOINT = process.env.REACT_APP_CLIENT_ENDPOINT;
 
 export default function Container(props) {
   const socket = socketIOClient(ENDPOINT);
-  console.log("props :>> ", props);
+  // console.log("props :>> ", props);
 
   // Array of messages
   const [messages, setMessages] = useState([]);
@@ -28,13 +28,13 @@ export default function Container(props) {
     });
 
     socket.on("recieve", (message) => {
-      console.log("here");
-      console.log("message :>> ", message);
+      // console.log("here");
+      // console.log("message :>> ", message);
       receivedMessage(message);
     });
 
     socket.on("user-joined", (name) => {
-      console.log("name :>> ", name);
+      // console.log("name :>> ", name);
       newUserJoined(name);
     });
   }, []);
@@ -62,7 +62,7 @@ export default function Container(props) {
     setMessage(e.target.value);
   }
 
-  console.log("messages :>> ", messages);
+  // console.log("messages :>> ", messages);
 
   return (
     <React.Fragment>

@@ -9,7 +9,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 
 export default function PasswordDialog(props) {
   const [open, setOpen] = React.useState(false);
-  console.log("props :>> ", props);
+  // console.log("props :>> ", props);
 
   const handleClickOpen = () => {
     setOpen(true);

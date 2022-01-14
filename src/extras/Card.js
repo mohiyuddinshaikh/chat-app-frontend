@@ -44,7 +44,7 @@ export default function RoomsContainer() {
     setOpen(false);
   }
 
-  console.log("password :>> ", password);
+  // console.log("password :>> ", password);
   function handleJoin() {
     if (password == rooms[currentIndex].password) {
       history.push({
@@ -52,7 +52,8 @@ export default function RoomsContainer() {
         state: { groupName: rooms[currentIndex].groupName },
       });
     } else {
-      console.log("Incorrect password");
+      // console.log("Incorrect password");
+      alert("Incorrect Password");
     }
   }
 
@@ -104,14 +105,15 @@ export default function RoomsContainer() {
               type="password"
               fullWidth
               onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password : qwertyuiop"
             />
           </DialogContent>
           <DialogActions>
-            <Button onClick={handleJoin} color="primary">
-              Join
-            </Button>
             <Button onClick={handleClose} color="primary">
               Cancel
+            </Button>
+            <Button onClick={handleJoin} color="primary">
+              Join
             </Button>
           </DialogActions>
         </Dialog>
