@@ -74,6 +74,15 @@ export default function RoomsContainer() {
           >
             Join Room
           </Typography>
+          <Typography
+            style={{
+              color: "black",
+              textAlign: "center",
+              fontSize: "1em",
+            }}
+          >
+            ( Password for all rooms : qwertyuiop )
+          </Typography>
           {rooms.map((item, index) => {
             return (
               <OneRoom
